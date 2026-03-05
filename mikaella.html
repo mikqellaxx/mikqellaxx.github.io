@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pringles Webpage Mika </title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    header, nav, section, footer { padding: 20px; text-align: center; }
+    header { background: #FFA500; color: white; }
+    nav { background: #FF8C00; }
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      margin: 0 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button:hover {
+      background: #FFA500;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .content { display: none; padding: 20px; min-height: 200px; }
+    .active { display: block; }
+    footer { background: #FF8C00; color: white; }
+    img { width: 200px; height: auto; margin: 10px 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pringles</h1>
+    <p>"Once you pop, the fun never stop!"</p>
+  </header>
+
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('contacts')">Contacts</button>
+    <button onclick="showPage('products')">Products</button>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="content active">
+     <h2>Did you know?</h2>
+<p>Pringles crisps are made from dried potato flakes, shaped into a unique curved form, then fried and seasoned to perfection. They're seasoned using a gentle waterfall process, where the seasoning is sprinkled on, rather than being tumbled like other chips. This helps preserve their distinctive shape and flavor. The crisps are then packed into their iconic can.</p><br>
+<h2>Our History</h2>
+    <p>Pringles were created to solve the problems of greasy and fragile chips. In 1956, Procter & Gamble tasked chemist <strong>Frederic J. Bauer</strong> with developing a better chip. Bauer designed the iconic saddle-shaped chip in 1965, but it wasn't a hit with consumers. However, he did create the innovative tube-shaped can that keeps Pringles chips fresh and intact, which became a key part of the product's success. This packaging allowed the chips to stay whole, making it a crucial element in the design.</p>
+  </section>
+<section id="contacts" class="content">
+    <h2>Contact Us</h2>
+    <p>Reach us anytime!</p>
+    <ul>
+      <li>Email: <a href="mailto:mikaellatanada70@gmail.com">mikaellatanada70@gmail.com</a></li>
+      <li>Phone:63+ 966-629-8342</li>
+
+<h3>Order Now!</h3>
+<form>
+  <label for="name">Name:</label><br>
+  <input type="text" id"Name" name="Name" required><br><br>
+
+  <label for="Email">Email:</label><br>
+  <input type="email" id="Email" name="Email" required><br><br>
+
+    <label for="flavr">Which flavor would you buy?</label><br>
+    <select id="flavr" name="flavor" required>
+      <option value="">Select a flavor</option>
+      <option value="Cheese">Cheese Flavor</option>
+      <option value="BBQ">BBQ Flavor</option>
+      <option value="SourCream">Sour Cream & Onion Flavor</option>
+    </select><br><br>
+
+  <label for="Comments">Comments:</label><br>
+  <textarea id="Comments" name="Comments" rows="4" cols="30" required></textarea><br><br>
+
+  <input type="submit" value="Submit Survey">
+  
+</form>
+    </ul>
+  </section>
+
+  <section id="products" class="content">
+    <h2>Our Products:</h2>
+    <p>Buy our best sellers!</p>
+    <h3>Cheese Flavor</h3>
+    <p>₱108.00</p>
+    <img src="cheese.jpg" alt="Pringles Cheese Flavor">
+    <h3>BBQ Flavor</h3>
+    <p>₱108.00</p>
+    <img src="bbq.jpg" alt="Pringles BBQ Flavor">
+
+    <h3>Sour Cream & Onion Flavor</h3>
+    <p>₱108.00</p>
+    <img src="sourcream.jpg" alt="Pringles Sour Cream & Onion Flavor">
+  </section>
+
+  <footer>
+    <p>Created by Mikaella Chieny Tañada</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      // Hide all sections
+      var sections = document.querySelectorAll('.content');
+      sections.forEach(function(section) {
+        section.classList.remove('active');
+      });
+      // Show the selected section
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
